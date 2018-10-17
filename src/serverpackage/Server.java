@@ -10,9 +10,6 @@ import java.net.UnknownHostException;
 
 public class Server{
 
-    final static int PORT = 9000;
-
-
     public static void main(String[] args) throws UnknownHostException, InterruptedException {
         // Get the address that we are going to connect to.
         String ipMulticast = args[0];
@@ -32,21 +29,21 @@ public class Server{
                 // Create a packet that will contain the data
                 // (in the form of bytes) and send it.
                 DatagramPacket pressurePacket = new DatagramPacket(pressure.getBytes(),
-                        pressure.getBytes().length, addr, 10000);
+                        pressure.getBytes().length, addr, 10001);
                 serverSocket.send(pressurePacket);
-                System.out.println("serverpackage.serverpackage sent packet with msg: " + pressure);
+                System.out.println(pressure);
 
 
                DatagramPacket temperaturePacket = new DatagramPacket(temperature.getBytes(),
-                       temperature.getBytes().length, addr, 10001);
+                       temperature.getBytes().length, addr, 10002);
                serverSocket.send(temperaturePacket);
-               System.out.println("serverpackage.serverpackage sent packet with msg: " + temperature);
+               System.out.println(temperature);
 
 
                DatagramPacket humidityPacket = new DatagramPacket(humidity.getBytes(),
-                       humidity.getBytes().length, addr, 10002);
+                       humidity.getBytes().length, addr, 10003);
                serverSocket.send(humidityPacket);
-               System.out.println("serverpackage.serverpackage sent packet with msg: " + humidity);
+               System.out.println(humidity);
 
                Thread.sleep(500);
             }
