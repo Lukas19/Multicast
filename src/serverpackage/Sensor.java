@@ -11,7 +11,7 @@ public class Sensor {
     public Sensor() {
         this.temperature = rand.nextInt(40);
         this.humidity = rand.nextInt(100);
-        this.pressure = rand.nextInt(1);
+        this.pressure = rand.nextInt(100000);
     }
 
     public float getTemperature() {
