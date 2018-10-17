@@ -4,11 +4,6 @@ import java.lang.*;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
-import java.net.UnknownHostException;
-import java.util.concurrent.locks.StampedLock;
-
-
-
 
 public class ThreadClient implements Runnable{
     private InetAddress ip;
@@ -34,9 +29,8 @@ public class ThreadClient implements Runnable{
                 // Receive the information and print it.
                 DatagramPacket msgPacket = new DatagramPacket(buf, buf.length);
                 clientSocket.receive(msgPacket);
-
                 String msg = new String(buf, 0, buf.length);
-                System.out.println("Socket 1 received msg: " + msg);
+                System.out.println("Socket received in port " + Integer.toString(port) + " is: " + msg);
             }
         } catch (IOException ex) {
             ex.printStackTrace();
