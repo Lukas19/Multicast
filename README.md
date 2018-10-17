@@ -11,7 +11,7 @@ java serverpackage.Server <ipMulticast>
 java serverpackage.Client <ipMulticast> <binarioMediciones>
 ``
 
-** Las variables que entrega el servidor son:
+* Las variables que entrega el servidor son:
 1. Presión
 2. Temperatura
 3. Humedad
