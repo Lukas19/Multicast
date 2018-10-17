@@ -1,7 +1,5 @@
 package serverpackage;
 
-import com.sun.deploy.trace.SocketTraceListener;
-
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
