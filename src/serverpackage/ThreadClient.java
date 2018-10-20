@@ -4,6 +4,7 @@ import java.lang.*;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
+import java.net.DatagramSocket;
 
 public class ThreadClient implements Runnable{
     private InetAddress ip;
@@ -21,7 +22,7 @@ public class ThreadClient implements Runnable{
         byte[] buf = new byte[256];
         // Create a new Multicast socket (that will allow other sockets/programs
         // to join it as well.
-        try (MulticastSocket clientSocket = new MulticastSocket(port)){
+        try (MulticastSocket clientSocket = new MulticastSocket(port)) {
             //Joint the Multicast group.
             clientSocket.joinGroup(ip);
 
@@ -36,5 +37,4 @@ public class ThreadClient implements Runnable{
             ex.printStackTrace();
         }
     }
-
 }
