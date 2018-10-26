@@ -19,9 +19,9 @@ java serverpackage.Client <ipMulticast> <binarioMediciones>
 * El servidor envía mediciones cada 1 segundo.
 
 * Las mediciones se envían mediante los puertos:
-1. Presión: 10003
-2. Temperatura: 10001
-3. Humedad: 10002
+1. Presión: 10001
+2. Temperatura: 10002
+3. Humedad: 10003
 4. Historial: 1004
 
 * Integrantes:
